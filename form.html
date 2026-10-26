@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            padding: 30px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            color: #c0392b;
+            font-size: 32px;
+            margin-bottom: 10px;
+        
+        }
+
+        .header h2 {
+            color: #176b35;
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .header h3 {
+            color: #1546a0;
+            font-size: 20px;
+        }
+
+        .container {
+            width: 500px;
+            max-width: 100%;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 7px;
+            font-size: 15px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
+        }
+
+        .radio-group,
+        .fee-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .radio-group label,
+        .fee-group label {
+            display: inline;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .error {
+            color: #e74c3c;
+            font-size: 13px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .success {
+            background-color: #d4edda;
+            color: #3b07e7;
+            padding: 12px;
+            border-radius: 7px;
+            text-align: center;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #217dbb;
+            transform: translateY(-2px);
+        }
+
+        .invalid {
+            border-color: #e74c3c;
+        }
+
+        .valid {
+            border-color: #2ecc71;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <marquee direction="left">
+            <h1>ABES ENGINEERING COLLEGE</h1>
+        </marquee>
+
+        <h2>B.TECH PROGRAMME</h2>
+        <h3>APPLICATION FOR STUDENT REGISTRATION</h3>
+    </div>
+
+    <div class="container">
+
+        <div id="successMessage" class="success">
+            Registration successful!
+        </div>
+
+        <form id="registrationForm">
+
+            
+            <div class="form-group">
+                <label for="studentName">Student Name:</label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    name="studentName"
+                    placeholder="Enter your name"
+                >
+
+                <div id="studentNameError" class="error">
+                    Please enter your name.
+                </div>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="rollNumber">Roll Number:</label>
+
+                <input
+                    type="text"
+                    id="rollNumber"
+                    name="rollNumber"
+                    placeholder="Enter roll number"
+                >
+
+                <div id="rollNumberError" class="error">
+                    Please enter your roll number.
+                </div>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="fatherName">Father's Name:</label>
+
+                <input
+                    type="text"
+                    id="fatherName"
+                    name="fatherName"
+                    placeholder="Enter father's name"
+                >
+
+                <div id="fatherNameError" class="error">
+                    Please enter father's name.
+                </div>
+            </div>
+
+            <div class="form-group">
+
+                <label>Gender:</label>
+
+                <div class="radio-group">
+
+                    <input
+                        type="radio"
+                        id="male"
+                        name="gender"
+                        value="Male"
+                    >
+                    <label for="male">Male</label>
+
+                    <input
+                        type="radio"
+                        id="female"
+                        name="gender"
+                        value="Female"
+                    >
+                    <label for="female">Female</label>
+
+                </div>
+
+                <div id="genderError" class="error">
+                    Please select your gender.
+                </div>
+
+            </div>
+
+            
+            <div class="form-group">
+
+                <label>Fee Paid:</label>
+
+                <div class="fee-group">
+
+                    <input
+                        type="radio"
+                        id="paid"
+                        name="fee"
+                        value="Paid"
+                    >
+                    <label for="paid">Yes</label>
+
+                    <input
+                        type="radio"
+                        id="notPaid"
+                        name="fee"
+                        value="Not Paid"
+                    >
+                    <label for="notPaid">No</label>
+
+                </div>
+
+                <div id="feeError" class="error">
+                    Please select fee status.
+                </div>
+
+            </div>
+
+            <button type="submit">
+                Register
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <script>
+
+        const form = document.getElementById("registrationForm");
+
+        form.addEventListener("submit", function(event) {
+
+            
+            event.preventDefault();
+
+            let valid = true;
+
+            
+            const studentName =
+                document.getElementById("studentName");
+
+            const rollNumber =
+                document.getElementById("rollNumber");
+
+            const fatherName =
+                document.getElementById("fatherName");
+            document.querySelectorAll(".error").forEach(function(error) {
+                error.style.display = "none";
+            });
+
+        
+            document.querySelectorAll("input").forEach(function(input) {
+                input.classList.remove("invalid");
+                input.classList.remove("valid");
+            });
+
+
+            
+            if (studentName.value.trim() === "") {
+
+                document.getElementById("studentNameError")
+                    .style.display = "block";
+
+                studentName.classList.add("invalid");
+
+                valid = false;
+
+            } else {
+
+                studentName.classList.add("valid");
+            }
+
+
+        
+            if (rollNumber.value.trim() === "") {
+
+                document.getElementById("rollNumberError")
+                    .style.display = "block";
+
+                rollNumber.classList.add("invalid");
+
+                valid = false;
+
+            } else {
+
+                rollNumber.classList.add("valid");
+            }
+
+
+            
+            if (fatherName.value.trim() === "") {
+
+                document.getElementById("fatherNameError")
+                    .style.display = "block";
+
+                fatherName.classList.add("invalid");
+
+                valid = false;
+
+            } else {
+
+                fatherName.classList.add("valid");
+            }
+
+
+            
+            const gender =
+                document.querySelector('input[name="gender"]:checked');
+
+            if (!gender) {
+
+                document.getElementById("genderError")
+                    .style.display = "block";
+
+                valid = false;
+            }
+
+
+            
+            const fee =
+                document.querySelector('input[name="fee"]:checked');
+
+            if (!fee) {
+
+                document.getElementById("feeError")
+                    .style.display = "block";
+
+                valid = false;
+            }
+
+
+            
+            if (valid) {
+
+                document.getElementById("successMessage")
+                    .style.display = "block";
+
+                
+                form.reset();
+                document.querySelectorAll("input").forEach(function(input) {
+                    input.classList.remove("valid");
+                });
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

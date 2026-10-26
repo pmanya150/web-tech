@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Student Entry Form</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e8f1f8;
+        }
+
+        /* Form box */
+        .form-container {
+            width: 600px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 12px gray;
+        }
+
+        h1 {
+            text-align: center;
+            color: #174ea6;
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            border: 2px solid #174ea6;
+            border-radius: 6px;
+            padding: 20px;
+        }
+
+        legend {
+            color: #174ea6;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 7px;
+        }
+
+        td:first-child {
+            width: 150px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 220px;
+            padding: 7px;
+            border: 1px solid #999;
+            border-radius: 4px;
+        }
+
+        textarea {
+            height: 70px;
+            resize: none;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #174ea6;
+            outline: none;
+            box-shadow: 0 0 4px #174ea6;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            accent-color: #174ea6;
+        }
+
+        .buttons {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 9px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"] {
+            background-color: #174ea6;
+            color: white;
+        }
+
+        input[type="reset"] {
+            background-color: #777;
+            color: white;
+            margin-left: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0b3275;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #444;
+        }
+
+        @media (max-width: 650px) {
+
+            .form-container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            input[type="tel"],
+            input[type="date"],
+            select,
+            textarea {
+                width: 95%;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="form-container">
+
+    <h1>Student Details</h1>
+
+    <form>
+
+        <fieldset>
+
+            <legend>Student Entry Form</legend>
+
+            <table>
+
+                <tr>
+                    <td>Student ID</td>
+                    <td>
+                        <input type="text"
+                               placeholder="Enter Student ID">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Student Name</td>
+                    <td>
+                        <input type="text"
+                               placeholder="Enter Student Name">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Father's Name</td>
+                    <td>
+                        <input type="text"
+                               placeholder="Enter Father's Name">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Mother's Name</td>
+                    <td>
+                        <input type="text"
+                               placeholder="Enter Mother's Name">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Date of Birth</td>
+                    <td>
+                        <input type="date">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="gender">
+                        Male
+
+                        <input type="radio" name="gender">
+                        Female
+
+                        <input type="radio" name="gender">
+                        Other
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Mobile No.</td>
+                    <td>
+                        <input type="tel"
+                               placeholder="10 digit number">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Email ID</td>
+                    <td>
+                        <input type="email"
+                               placeholder="Enter Email">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password"
+                               placeholder="Enter Password">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Address</td>
+                    <td>
+                        <textarea
+                            placeholder="Enter Address"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Department</td>
+                    <td>
+                        <select>
+                            <option>CSE</option>
+                            <option>IT</option>
+                            <option>ECE</option>
+                            <option>ME</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Course</td>
+                    <td>
+                        <select>
+                            <option>B.Tech</option>
+                            <option>M.Tech</option>
+                            <option>BCA</option>
+                            <option>MCA</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Semester</td>
+                    <td>
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Hobbies</td>
+                    <td>
+                        <input type="checkbox"> Reading
+                        <input type="checkbox"> Sports
+                        <input type="checkbox"> Music
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Upload Photo</td>
+                    <td>
+                        <input type="file">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="buttons">
+
+                        <input type="submit"
+                               value="Submit">
+
+                        <input type="reset"
+                               value="Reset">
+
+                    </td>
+                </tr>
+
+            </table>
+
+        </fieldset>
+
+    </form>
+
+</div>
+
+</body>
+</html>

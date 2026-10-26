@@ -1,0 +1,17 @@
+address.dtd
+<!ELEMENT address (name, company, phone)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT company (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+
+address.xml
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE address SYSTEM "address.dtd">
+⇓ OR
+<!DOCTYPE address SYSTEM "C:\\xml\\address.dtd">
+
+<address>
+    <name> Tanmay Patil </name>
+    <company> IBM </company>
+    <phone> (011)123-4567 </phone>
+</address>

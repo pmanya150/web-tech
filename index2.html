@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Grid Layout</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Main Grid */
+        .container {
+            display: grid;
+
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 80px 60px 400px 80px;
+
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background-color: lightgreen;
+            grid-column: 1 / 4;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        /* Navigation */
+        .nav {
+            background-color: #eeeeee;
+            grid-column: 1 / 4;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Left Section */
+        .left {
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        /* Main Content */
+        .main {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Right Section */
+        .right {
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #dddddd;
+            grid-column: 1 / 4;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            My Website
+        </div>
+
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="left">
+            <h3>Left Side</h3>
+            <p>Some content here.</p>
+        </div>
+
+        <div class="main">
+            <h2>Welcome</h2>
+            <p>This is the main content area.</p>
+        </div>
+
+        <div class="right">
+            <h3>Right Side</h3>
+            <p>Some content here.</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 My Website</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

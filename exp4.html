@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Online Courses</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+        }
+
+        /* Main container */
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        /* Heading */
+
+        .heading {
+            text-align: center;
+            color: #174ea6;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        /* Course card */
+
+        .course {
+            background-color: white;
+            border: 1px solid #55aaff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 18px;
+
+            box-shadow: 0 3px 10px #ccc;
+
+            transition: 0.3s;
+        }
+
+        .course:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px #aaa;
+        }
+
+        .course h2 {
+            color: #2375c9;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .course p {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .category {
+            color: #555;
+        }
+
+        .duration {
+            color: #555;
+        }
+
+        .instructor {
+            color: #333;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Button */
+
+        .btn {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #174ea6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0d3477;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 95%;
+            }
+
+            .heading {
+                font-size: 25px;
+            }
+
+            .course h2 {
+                font-size: 19px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 class="heading">
+        Online Courses
+    </h1>
+
+
+    <!-- Course 1 -->
+
+    <div class="course">
+
+        <h2>HTML Basics</h2>
+
+        <p class="category">
+            <b>Category:</b> Web Development
+        </p>
+
+        <p class="duration">
+            <b>Duration:</b> 4 Weeks
+        </p>
+
+        <p class="instructor">
+            <b>Instructor:</b> Rahul Sharma
+        </p>
+
+        <p class="price">
+            Price: Free
+        </p>
+
+        <button class="btn">
+            Enroll Now
+        </button>
+
+    </div>
+
+
+    <!-- Course 2 -->
+
+    <div class="course">
+
+        <h2>CSS Fundamentals</h2>
+
+        <p class="category">
+            <b>Category:</b> Web Development
+        </p>
+
+        <p class="duration">
+            <b>Duration:</b> 3 Weeks
+        </p>
+
+        <p class="instructor">
+            <b>Instructor:</b> Priya Singh
+        </p>
+
+        <p class="price">
+            Price: ₹999
+        </p>
+
+        <button class="btn">
+            Enroll Now
+        </button>
+
+    </div>
+
+
+    <!-- Course 3 -->
+
+    <div class="course">
+
+        <h2>JavaScript Essentials</h2>
+
+        <p class="category">
+            <b>Category:</b> Programming
+        </p>
+
+        <p class="duration">
+            <b>Duration:</b> 6 Weeks
+        </p>
+
+        <p class="instructor">
+            <b>Instructor:</b> Amit Kumar
+        </p>
+
+        <p class="price">
+            Price: ₹1499
+        </p>
+
+        <button class="btn">
+            Enroll Now
+        </button>
+
+    </div>
+
+
+    <!-- Course 4 -->
+
+    <div class="course">
+
+        <h2>Python Programming</h2>
+
+        <p class="category">
+            <b>Category:</b> Programming
+        </p>
+
+        <p class="duration">
+            <b>Duration:</b> 8 Weeks
+        </p>
+
+        <p class="instructor">
+            <b>Instructor:</b> Neha Verma
+        </p>
+
+        <p class="price">
+            Price: ₹1999
+        </p>
+
+        <button class="btn">
+            Enroll Now
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+</html>
